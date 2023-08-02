@@ -1,4 +1,4 @@
-# Nome do Projeto
+# Pomodoro
 
 ![Logo do Projeto](link_para_logo.png)
 
@@ -19,11 +19,11 @@ Descrição curta do projeto e o que ele faz.
 
 ## Visão Geral
 
-Breve descrição do projeto, mostrando suas principais características e funcionalidades.
+O projeto Pomodoro em React é uma aplicação simples e eficiente para ajudar os usuários a gerenciar melhor o seu tempo e aumentar a produtividade usando a técnica de Pomodoro. A técnica do Pomodoro é um método de gestão de tempo que consiste em dividir o trabalho em intervalos de tempo curtos (geralmente 25 minutos) chamados "pomodoros", seguidos de pequenos intervalos de descanso.
 
 ## Pré-requisitos
 
-Liste aqui os pré-requisitos necessários para executar o projeto, como Node.js, Yarn ou NPM.
+Node Js
 
 ## Instalação
 ```
@@ -54,16 +54,15 @@ React.js: Biblioteca JavaScript para criar interfaces de usuário.
 Styled Components: Biblioteca para estilização de componentes usando tagged template literals.
 React Router Dom: Biblioteca para gerenciamento de rotas em aplicações React.
 
-## Contribuição
-Explique como outras pessoas podem contribuir para o projeto. Inclua diretrizes de estilo de código, informações sobre testes, etc.
+
 
 ## Licença
 Indique a licença do projeto, por exemplo, MIT, Apache, etc.
 
 ## Contato
 
-Nome: [Seu Nome]
+Nome: [Matheus Mendes Dos Reis]
 
-Email: [seuemail@email.com]
+Email: [matheusmendesreisspa@mail.com]
 
-GitHub: [seu-usuario-github]
+GitHub: [Matheus Mendes](https://github.com/MathMendesReis)
