@@ -59,7 +59,7 @@ export const Separator = styled.div`
   justify-content: center;
 `;
 
-export const StartCount = styled.button`
+export const BaseButton = styled.button`
   width: 100%;
   border: 0;
   padding: 1rem;
@@ -74,12 +74,6 @@ export const StartCount = styled.button`
   font-weight: bold;
   cursor: pointer;
   color: ${({theme})=>theme.colors.gray100};
-  background-color:  ${({theme})=>theme.colors.brand100};
-
-
-  &:hover:not(:disabled){
-    background-color:  ${({theme})=>theme.colors.brand300};;
-  }
 
   &:disabled{
     cursor: not-allowed;
@@ -110,6 +104,22 @@ color: ${({theme})=>theme.colors.gray100};
 }
 
 `;
+
+
+export const StartCount = styled(BaseButton)`
+  background-color:  ${({theme})=>theme.colors.brand100};
+  &:hover:not(:disabled){
+    background-color:  ${({theme})=>theme.colors.brand300};;
+  }
+
+
+`
+export const StopButton = styled(BaseButton)`
+background-color:  ${({theme})=>theme.colors.darkRed};
+  &:hover:not(:disabled){
+    background-color:  ${({theme})=>theme.colors.red};;
+  }
+`
 
 
 export const TaskInput = styled(BaseInput)`
