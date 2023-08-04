@@ -32,7 +32,7 @@ export const theme: DefaultTheme = {
     gray500: '#7C7C8A',
     gray600: '#64666B',
     gray700: '#424449',
-    gray800: '#1D1E21',
+    gray800: '#323238',
     gray900: '#202024',
     primary: '#F83600',
     secondary: '#FE8C00',
