@@ -74,7 +74,17 @@ export const StartCount = styled.button`
   font-weight: bold;
   cursor: pointer;
   color: ${({theme})=>theme.colors.gray100};
-  background-color:  ${({theme})=>theme.colors.brand300};;
+  background-color:  ${({theme})=>theme.colors.brand100};
+
+
+  &:hover:not(:disabled){
+    background-color:  ${({theme})=>theme.colors.brand300};;
+  }
+
+  &:disabled{
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
 `
 export const BaseInput = styled.input`
 display: flex;
