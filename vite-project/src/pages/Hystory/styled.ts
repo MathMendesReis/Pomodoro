@@ -66,7 +66,7 @@ export const TableContainer = styled.div`
 `;
 
 interface StatusProps{
-  statusColor:'yellow' | 'red' | 'green'
+  statuscolor:'yellow' | 'red' | 'green'
 }
 
 export const Status = styled.span<StatusProps>`
@@ -79,6 +79,6 @@ export const Status = styled.span<StatusProps>`
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 9999px;
-    background-color: ${(props)=>props.theme.colors[props.statusColor]};
+    background-color: ${(props)=>props.theme.colors[props.statuscolor]};
   }
 `;
