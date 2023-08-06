@@ -1,6 +1,6 @@
 import {HomeContainer, StopButton, StartCount } from "./styled"
 import { Hand, Play } from "@phosphor-icons/react";
-import { createContext, useContext, useState } from "react";
+import {useContext} from "react";
 import CountDownComponent from "./countDown";
 import NewCycleForm from "./newCycleForm";
 import  {z}  from 'zod'
