@@ -3,6 +3,7 @@ import {
   } from "react-router-dom";
 import Main from "../pages/Main";
 import DefaultLayouts from "../layouts/defaultLayout";
+import Hystory from "../pages/Hystory";
 export default function useRouter() {
     const router = createBrowserRouter([
         {
@@ -12,6 +13,10 @@ export default function useRouter() {
             {
               path:"/",
               element: <Main />,
+            },
+            {
+              path:"/hystory",
+              element: <Hystory />,
             }
           ]
         },

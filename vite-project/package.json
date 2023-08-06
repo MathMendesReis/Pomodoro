@@ -10,15 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.1.1",
+    "@phosphor-icons/react": "^2.0.10",
     "@reduxjs/toolkit": "^1.9.5",
+    "date-fns": "^2.30.0",
     "flow": "^0.2.3",
     "git": "^0.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.2",
     "react-redux": "^8.1.1",
     "react-router-dom": "^6.14.2",
     "redux": "^4.2.1",
-    "styled-components": "^6.0.5"
+    "styled-components": "^6.0.5",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

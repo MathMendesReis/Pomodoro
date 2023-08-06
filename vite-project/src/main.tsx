@@ -9,6 +9,7 @@ import {
 import useRouter from './router/useRouter.tsx'
 import { Provider as ReduxProvider } from 'react-redux'
 import { store } from './store/index.ts';
+import { CyclesContextProvider } from './context/cyclesContext/cyclesContext.tsx';
 
 
 const [router] = useRouter()
@@ -17,7 +18,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Theme>
       <ReduxProvider store={store}>
         <GlobalStyle/>
-        <RouterProvider router={router} />
+        <CyclesContextProvider >
+          <RouterProvider router={router} />
+        </CyclesContextProvider>
       </ReduxProvider>
     </Theme>
   </React.StrictMode>,
