@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useReducer, useState } from "react";
 
 export interface Cycle {
   id:string
@@ -19,6 +19,9 @@ interface CyclesContextType {
   setIsActive: React.Dispatch<React.SetStateAction<string | null>>;
   minMinuts:number
   cycles:Cycle[]
+  state:{
+    count:number
+  }
 
 
 }
@@ -31,6 +34,21 @@ interface CyclesContextProps {
 export function CyclesContextProvider({ children }:CyclesContextProps) {
     //states
     const [cycles, setCycles] = useState<Cycle[]>([])
+
+    const initialState = {count: 0};
+
+    function reducer(state: { count: number; }, action: { type: any; }) {
+      switch (action.type) {
+        case 'increment':
+          return {count: state.count + 1};
+        case 'decrement':
+          return {count: state.count - 1};
+        default:
+          throw new Error();
+      }
+    }
+    const [state, dispatch] = useReducer(reducer,initialState);
+
     const [isActive, setIsActive] = useState<string | null>(null)
     const [ammoutSeconds , setAmmoutSeconds] = useState<number>(0)
     //state
@@ -46,7 +64,8 @@ export function CyclesContextProvider({ children }:CyclesContextProps) {
       setCycles,
       setIsActive,
       minMinuts,
-      cycles
+      cycles,
+      state
       }}>
         {children}
       </CyclesContext.Provider>
