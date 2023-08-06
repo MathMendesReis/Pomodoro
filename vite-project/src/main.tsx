@@ -18,7 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <Theme>
       <ReduxProvider store={store}>
         <GlobalStyle/>
-        <CyclesContextProvider >
+        <CyclesContextProvider>
           <RouterProvider router={router} />
         </CyclesContextProvider>
       </ReduxProvider>

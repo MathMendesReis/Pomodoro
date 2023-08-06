@@ -9,10 +9,12 @@ export default function Header() {
       <img src={Logo} alt="" />
       <nav>
          <NavLink
+         title='ir para o cronometro'
           to="/">
             <img src={Clock} alt="" />
          </NavLink>
          <NavLink
+          title='ir para o historico'
           to="/hystory">
             <img  src={MenuItem} alt="" />
           </NavLink>
