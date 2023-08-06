@@ -1,6 +1,6 @@
 # Pomodoro
 
-![Logo do Projeto](link_para_logo.png)
+![Logo do Projeto](../Pomodoro/vite-project//src/assets/react.svg)
 
 Descrição curta do projeto e o que ele faz.
 
@@ -10,11 +10,8 @@ Descrição curta do projeto e o que ele faz.
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
 - [Como Usar](#como-usar)
-- [Estrutura do Projeto](#estrutura-do-projeto)
 - [Estilos](#estilos)
 - [Dependências](#dependências)
-- [Contribuição](#contribuição)
-- [Licença](#licença)
 - [Contato](#contato)
 
 ## Visão Geral
@@ -41,13 +38,13 @@ yarn install
 ```
 
 ## Como Usar
-Explicação sobre como usar o projeto após a instalação.
+A pagina home tem um formulario e um cronometro onde o usuario pode colocar o tempo que vai lavar o cliclo.
+Na pagina de historico, o usuario pode visuzalizar quais foram os ciclos que ele criou e o status dele
 
-## Estrutura do Projeto
-Descreva aqui a estrutura básica do projeto e seus principais arquivos.
+
 
 ## Estilos
-Explique aqui a abordagem de estilização utilizada no projeto, por exemplo, se usa Styled Components.
+Usei o styled compoenentes para estilizar o projeto
 
 ## Dependências
 React.js: Biblioteca JavaScript para criar interfaces de usuário.
@@ -55,9 +52,6 @@ Styled Components: Biblioteca para estilização de componentes usando tagged te
 React Router Dom: Biblioteca para gerenciamento de rotas em aplicações React.
 
 
-
-## Licença
-Indique a licença do projeto, por exemplo, MIT, Apache, etc.
 
 ## Contato
 
