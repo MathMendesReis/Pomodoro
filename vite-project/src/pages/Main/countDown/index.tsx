@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext, useEffect } from "react"
 import { CountDown, Separator } from "./styled"
 import { differenceInSeconds } from "date-fns"
 import { CyclesContext } from "../../../context/cyclesContext/cyclesContext"
