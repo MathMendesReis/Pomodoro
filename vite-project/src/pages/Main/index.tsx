@@ -12,7 +12,7 @@ import { Cycle, CyclesContext } from "../../context/cyclesContext/cyclesContext"
 
 
 export default function Main() {
-  const {minMinuts, isActive, setIsActive,setCycles,state} = useContext(CyclesContext)
+  const {minMinuts, isActive, setIsActive,setCycles} = useContext(CyclesContext)
 
   const newTaskSchemma = z.object({
     task:z.string().min(minMinuts, 'Informe a tarefa'),
