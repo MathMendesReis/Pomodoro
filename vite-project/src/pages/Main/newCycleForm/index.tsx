@@ -6,7 +6,7 @@ import { CyclesContext } from '../../../context/cyclesContext/cyclesContext'
 
 
 export default function NewCycleForm() {
-  const {isActive, minMinuts} = useContext(CyclesContext)
+  const {activeCycle, minMinuts} = useContext(CyclesContext)
   const {register} = useFormContext()
   return (
     <FormContainer>
@@ -16,7 +16,7 @@ export default function NewCycleForm() {
         placeholder="Dê um nome para o seu projeto"
         type="text"
         list="tasks-sugestoes"
-        disabled={!!isActive}
+        disabled={!!activeCycle}
         id="task" />
         <datalist
         id="tasks-sugestoes"
@@ -33,7 +33,7 @@ export default function NewCycleForm() {
        size={5}
        max={60}
        min={minMinuts}
-       disabled={!!isActive}
+       disabled={!!activeCycle}
        id="minutesAmmount" />
     </label>
     </FormContainer>

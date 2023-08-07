@@ -22,7 +22,7 @@ export default function Hystory() {
         </thead>
         <tbody>
           {cycles.map(cycle => (
-          <tr>
+          <tr key={cycle.id}>
             <td>{cycle.task}</td>
             <td>{cycle.minutsAmmout} minutos</td>
             <td>{formatDistanceToNow(cycle.startDate, {

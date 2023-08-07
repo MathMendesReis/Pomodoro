@@ -5,7 +5,7 @@ import { CyclesContext } from "../../../context/cyclesContext/cyclesContext"
 
 
 export default function CountDownComponent() {
-  const {activeCycle,isActive, ammoutSeconds, setAmmoutSeconds, setCycles, setIsActive} = useContext(CyclesContext)
+  const {activeCycle,activeCycleId, ammoutSeconds, setAmmoutSeconds,handFinishCycle} = useContext(CyclesContext)
 
   const totalSeconds = activeCycle ? activeCycle.minutsAmmout * 60 : 0
   const currentSeconds = activeCycle ? totalSeconds - ammoutSeconds : 0
@@ -16,22 +16,13 @@ export default function CountDownComponent() {
 
   useEffect(()=>{
     let interval: number;
-
-    if (isActive && activeCycle!== undefined ) {
+    if (activeCycleId && activeCycle!== undefined ) {
       interval = setInterval(()=>{
         const secondsDifference = differenceInSeconds(new Date(),activeCycle.startDate)
         //
         if(secondsDifference > totalSeconds){
-          setCycles((state)=>
-          state.map((cycle) => {
-        if (cycle.id === isActive) {
-          return { ...cycle, finishedDate: new Date() };
-        } else {
-          return cycle;
-        }
-      }));
-      clearInterval(interval);
-      setIsActive(null)
+          handFinishCycle()
+          clearInterval(interval);
         }else{
           setAmmoutSeconds(secondsDifference)
         }
@@ -44,9 +35,9 @@ export default function CountDownComponent() {
   },[activeCycle])
 
   useEffect(()=>{
-    if(isActive){
-    document.title = `${minuts}:${seconds}`
-    }
+     if(activeCycleId){
+     document.title = `${minuts}:${seconds}`
+     }
   },[minuts, seconds, activeCycle])
 
   return (
