@@ -3,10 +3,10 @@ import { Hand, Play } from "@phosphor-icons/react";
 import {useContext} from "react";
 import CountDownComponent from "./countDown";
 import NewCycleForm from "./newCycleForm";
-import  {nan, z}  from 'zod'
+import  {z}  from 'zod'
 import { FormProvider, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Cycle, CyclesContext } from "../../context/cyclesContext/cyclesContext";
+import {CyclesContext } from "../../context/cyclesContext/cyclesContext";
 
 const newTaskSchemma = z.object({
   task:z.string().min(1, 'Informe a tarefa'),
@@ -16,7 +16,7 @@ const newTaskSchemma = z.object({
 export type newTask = z.infer<typeof newTaskSchemma>
 
 export default function Main() {
-  const {handleNewSubmitAction, dispatch,handInterruptinCycle, activeCycle} = useContext(CyclesContext)
+  const {handleNewSubmitAction,handInterruptinCycle, activeCycle} = useContext(CyclesContext)
 
 
 
@@ -36,6 +36,7 @@ export default function Main() {
 
   function handleNewSubmit(data:newTask) {
     handleNewSubmitAction(data)
+    reset()
   }
 
  return (
