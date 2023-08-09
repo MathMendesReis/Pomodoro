@@ -12,6 +12,17 @@ span{
   padding: 2rem 1rem;
   border-radius: 8px;
 }
+@media (max-width: 634px) {
+  font-size: 6rem;
+}
+
+@media (max-width: 500px) {
+  font-size: 4rem;
+}
+
+@media (max-width: 400px) {
+  font-size: 1.7rem;
+}
 
 `
 export const Separator = styled.div`
