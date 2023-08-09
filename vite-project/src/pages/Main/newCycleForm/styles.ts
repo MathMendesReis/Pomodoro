@@ -15,7 +15,22 @@ label{
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  @media (max-width: 400px) {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
+
+@media (max-width: 634px) {
+}
+
+@media (max-width: 500px) {
+}
+
+@media (max-width: 400px) {
+}
+
 
 `;
 
@@ -42,6 +57,10 @@ color: ${({theme})=>theme.colors.gray100};
   outline: none;
 
 }
+
+@media (max-width: 400px) {
+    flex-wrap: wrap;
+  }
 
 `;
 
